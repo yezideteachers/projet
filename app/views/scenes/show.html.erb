@@ -1,2 +1,24 @@
-<h1>Scenes#show</h1>
-<p>Find me in app/views/scenes/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recit:</strong>
+  <%= @scene.recit %>
+</p>
+
+<p>
+  <strong>Lieu:</strong>
+  <%= @scene.lieu %>
+</p>
+
+<p>
+  <strong>Periode:</strong>
+  <%= @scene.periode %>
+</p>
+
+<p>
+  <strong>Id anecdote:</strong>
+  <%= @scene.id_anecdote %>
+</p>
+
+<%= link_to 'Edit', edit_scene_path(@scene) %> |
+<%= link_to 'Back', scenes_path %>

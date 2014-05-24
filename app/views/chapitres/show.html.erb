@@ -1,2 +1,24 @@
-<h1>Chapitres#show</h1>
-<p>Find me in app/views/chapitres/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chapitre:</strong>
+  <%= @chapitre.chapitre_id %>
+</p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @chapitre.titre %>
+</p>
+
+<p>
+  <strong>Sujet:</strong>
+  <%= @chapitre.anecdotes.first.sujet %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @chapitre.anecdotes.first.theme %>
+</p>
+
+<%= link_to 'Edit', edit_chapitre_path(@chapitre) %> |
+<%= link_to 'Back', chapitres_path %>

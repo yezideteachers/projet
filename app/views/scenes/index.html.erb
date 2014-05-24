@@ -1,2 +1,31 @@
-<h1>Scenes#index</h1>
-<p>Find me in app/views/scenes/index.html.erb</p>
+<h1>Listing scenes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Recit</th>
+      <th>Lieu</th>
+      <th>Periode</th>
+      <th>Id anecdote</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scenes.each do |scene| %>
+      <tr>
+        <td><%= scene.recit %></td>
+        <td><%= scene.lieu %></td>
+        <td><%= scene.periode %></td>
+        <td><%= scene.id_anecdote %></td>
+        <td><%= link_to 'Show', scene %></td>
+        <td><%= link_to 'Edit', edit_scene_path(scene) %></td>
+        <td><%= link_to 'Destroy', scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scene', new_scene_path %>

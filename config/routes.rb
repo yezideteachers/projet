@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  root 'chapitres#index'
+ 
+
+  get 'static_pages/home'
+
+  get 'static_pages/help'
+
+  get 'static_pages/about'
+
+  root 'static_pages#index'
   resources :users 
   resources :chapitres
   resources :anecdotes

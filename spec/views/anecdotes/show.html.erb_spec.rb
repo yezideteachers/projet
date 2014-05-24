@@ -1,5 +1,19 @@
 require 'spec_helper'
 
-describe "anecdotes/show.html.erb" do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe "anecdotes/show" do
+  before(:each) do
+    @anecdote = assign(:anecdote, stub_model(Anecdote,
+      :sujet => "Sujet",
+      :theme => "Theme",
+      :chapitre_id => 1
+    ))
+  end
+
+  it "renders attributes in <p>" do
+    render
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/Sujet/)
+    rendered.should match(/Theme/)
+    rendered.should match(/1/)
+  end
 end

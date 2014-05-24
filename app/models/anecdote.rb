@@ -1,4 +1,5 @@
 class Anecdote < ActiveRecord::Base
 
-	belong_to :chapitres
+	#attr_accessor :sujet, :theme
+	belongs_to :chapitre
 end

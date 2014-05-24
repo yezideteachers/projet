@@ -1,2 +1,39 @@
-<h1>Chapitres#index</h1>
-<p>Find me in app/views/chapitres/index.html.erb</p>
+<h1>Listing chapitres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chapitre</th>
+      <th>Titre</th>
+      <th>Anecdote</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<p>
+    <% @chapitres.all.each do |chapitre| %>
+    <tr>
+      <td><%= chapitre.chapitre_id %></td>
+      <td><%= chapitre.titre %></td>
+      <td><%= chapitre.titre %></td>
+
+      <td>
+       <% chapitre.anecdotes.each do |anecdote| %>
+       <td><%= anecdote.sujet %>,</td>
+       <% end %>
+</p>
+       <td><%= link_to 'Show', chapitre %></td>
+       <td><%= link_to 'Edit', edit_chapitre_path(chapitre) %></td>
+       <td><%= link_to 'Destroy', chapitre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     </tr>
+     <% end %>
+
+
+   </td>
+ </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chapitre', new_chapitre_path %>

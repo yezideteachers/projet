@@ -1,2 +1,19 @@
-<h1>Anecdotes#show</h1>
-<p>Find me in app/views/anecdotes/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sujet:</strong>
+  <%= @anecdote.sujet %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @anecdote.theme %>
+</p>
+
+<p>
+  <strong>Chapitre:</strong>
+  <%= @anecdote.chapitre_id %>
+</p>
+
+<%= link_to 'Edit', edit_anecdote_path(@anecdote) %> |
+<%= link_to 'Back', anecdotes_path %>

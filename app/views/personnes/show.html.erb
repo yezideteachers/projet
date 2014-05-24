@@ -1,2 +1,9 @@
-<h1>Personnes#show</h1>
-<p>Find me in app/views/personnes/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @personne.nom %>
+</p>
+
+<%= link_to 'Edit', edit_personne_path(@personne) %> |
+<%= link_to 'Back', personnes_path %>
