@@ -6,7 +6,7 @@ describe "scenes/show" do
       :recit => "MyText",
       :lieu => "Lieu",
       :periode => "Periode",
-      :id_anecdote => 1
+      :chapitre_id => 1
     ))
   end
 

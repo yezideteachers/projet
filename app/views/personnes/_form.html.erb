@@ -15,6 +15,16 @@
     <%= f.label :nom %><br>
     <%= f.text_field :nom %>
   </div>
+<div class="field">
+ <% Scene.all.each do |scene| %>
+ <label><%= scene.periode %>
+   <%= check_box_tag "personne[scene_ids][]",
+   scene.id,  @personne.scenes.include?(scene)%> 
+ </label>
+ <% end %>
+</div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

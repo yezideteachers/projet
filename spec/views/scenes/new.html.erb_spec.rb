@@ -6,7 +6,7 @@ describe "scenes/new" do
       :recit => "MyText",
       :lieu => "MyString",
       :periode => "MyString",
-      :id_anecdote => 1
+      :chapitre_id => 1
     ).as_new_record)
   end
 
@@ -18,7 +18,7 @@ describe "scenes/new" do
       assert_select "textarea#scene_recit[name=?]", "scene[recit]"
       assert_select "input#scene_lieu[name=?]", "scene[lieu]"
       assert_select "input#scene_periode[name=?]", "scene[periode]"
-      assert_select "input#scene_id_anecdote[name=?]", "scene[id_anecdote]"
+      assert_select "input#scene_chapitre_id[name=?]", "scene[chapitre_id]"
     end
   end
 end

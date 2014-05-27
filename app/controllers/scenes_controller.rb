@@ -40,6 +40,7 @@ class ScenesController < ApplicationController
   # PATCH/PUT /scenes/1
   # PATCH/PUT /scenes/1.json
   def update
+     params[:scene][:personnes_ids] ||= []
     respond_to do |format|
       if @scene.update(scene_params)
         format.html { redirect_to @scene, notice: 'Scene was successfully updated.' }
@@ -69,6 +70,6 @@ class ScenesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scene_params
-      params.require(:scene).permit(:recit, :lieu, :periode, :id_anecdote)
+         params.require(:scene).permit(:recit, :lieu, :periode, :chapitre_id,:chapitre_ids => [] , :personne_ids => [])
     end
 end

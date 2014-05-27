@@ -10,14 +10,25 @@
   <%= @chapitre.titre %>
 </p>
 
+
+
 <p>
-  <strong>Sujet:</strong>
-  <%= @chapitre.anecdotes.first.sujet %>
+  <strong>Anecdote:</strong>
+  <% @chapitre.anecdotes.each do |c| %>
+
+ <p> <small>sujet: </small><%= c.sujet %>
+  <small>theme: </small><%= c.theme %></p>
+  <% end %>
+
 </p>
 
 <p>
-  <strong>Theme:</strong>
-  <%= @chapitre.anecdotes.first.theme %>
+ <strong>Scene:</strong>
+ <% @chapitre.scenes.each do |scene| %>
+ <p><small>recit: </small><%= scene.recit %>
+ <small>lieu: </small><%=scene.lieu %>
+ <small>periode: </small><%=scene.periode %></p>
+ <% end %>
 </p>
 
 <%= link_to 'Edit', edit_chapitre_path(@chapitre) %> |

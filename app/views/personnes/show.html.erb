@@ -5,5 +5,14 @@
   <%= @personne.nom %>
 </p>
 
+<p>
+ <strong>Scene:</strong>
+ <% @personne.scenes.each do |scene| %>
+ <p><small>recit: </small><%= scene.recit %>
+ <small>lieu: </small><%=scene.lieu %>
+ <small>periode: </small><%=scene.periode %></p>
+ <% end %>
+</p>
+
 <%= link_to 'Edit', edit_personne_path(@personne) %> |
 <%= link_to 'Back', personnes_path %>

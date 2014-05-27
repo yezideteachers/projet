@@ -16,9 +16,18 @@
 </p>
 
 <p>
-  <strong>Id anecdote:</strong>
-  <%= @scene.id_anecdote %>
+  <strong>Chapitre:</strong>
+  <%= @scene.chapitre_id %>
 </p>
+
+<p>
+ <strong>Personne:</strong>
+ <% @scene.personnes.each do |personne| %>
+ <p><small>nom: </small><%= personne.nom %>
+ 
+ <% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_scene_path(@scene) %> |
 <%= link_to 'Back', scenes_path %>
