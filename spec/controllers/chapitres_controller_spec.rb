@@ -157,4 +157,25 @@ describe ChapitresController do
     end
   end
 
+  # describe "GET 'Home" do
+  #   it "devrait reussir" do
+  #     get 'home'
+  #     response.should be_success
+  #   end
+  # end
+
+  # describe "GET 'Scene'" do
+  #   it "devrait reussir" do
+  #     get 'scene'
+  #     response.should be_success
+  #   end
+  # end
+
+  # describe "GET 'about'" do
+  #   it "devrait reussir" do
+  #     get 'about'
+  #     response.should be_success
+  #   end
+  # end
+
 end

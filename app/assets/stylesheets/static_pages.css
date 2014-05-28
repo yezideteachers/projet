@@ -1,4 +1,92 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+.container {
+  width: 1300px;
+}
+
+body {
+  background: #000;
+}
+
+header {
+  padding-top: 10px;
+}
+
+header img {
+  padding: 1em;
+  background: #fff;
+}
+
+section {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: #000;
+}
+
+section h1 {
+  font-size: 200%;
+}
+
+/* Liens */
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: blue;
+}
+
+/* Navigation */
+
+nav {
+  float: right;
+}
+
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: green;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.round {
+  -moz-border-radius:    100px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 200px;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+

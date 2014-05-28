@@ -22,6 +22,7 @@ group :assets do
   gem 'uglifier', '>= 1.3.0'
   # Use CoffeeScript for .js.coffee assets and views
   gem 'coffee-rails', '~> 4.0.0'
+
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -31,7 +32,8 @@ end
 gem 'jquery-rails'
 
 group :test do
-   gem 'capybara', '1.1.2'
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '4.1.0'
 end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

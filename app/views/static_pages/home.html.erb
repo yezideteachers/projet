@@ -1,2 +1,17 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, 'Assistant Home') %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+  </head>
+  <body>
+<div class="center hero-unit">
+<h1>Assistant App</h1>
+<h2>
+ Bienvenue Dans votre Assistant Application
+</h2>
+<%= link_to "Creer un livre!", new_chapitre_path, class: "btn btn-large btn-primary" %>
+</div>
+</body>
+</html>

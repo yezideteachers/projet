@@ -62,6 +62,12 @@ class ChapitresController < ApplicationController
     end
   end
 
+   def scene
+    end
+
+    def home
+    end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_chapitre
@@ -72,4 +78,6 @@ class ChapitresController < ApplicationController
     def chapitre_params
       params.require(:chapitre).permit(:chapitre_id, :titre,:anecdote_ids => [] , :scene_ids => [] )
     end
+
+   
 end
