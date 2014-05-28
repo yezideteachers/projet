@@ -11,5 +11,16 @@ require 'spec_helper'
 #   end
 # end
 describe UsersHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+ 
+  describe "full_title" do
+    it "should include the page name" do
+      full_title("foo").should =~ /foo/
+    end
+
+    it "should includes the base name" do
+      full_title("foo").should =~ /^user admin/
+    end
+
+    
+  end
 end

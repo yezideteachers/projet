@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140526001906) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20140528102627) do
 
   create_table "anecdotes", force: true do |t|
     t.string   "sujet"
@@ -42,7 +39,12 @@ ActiveRecord::Schema.define(version: 20140526001906) do
     t.integer "scene_id"
   end
 
-  add_index "personnes_scenes", ["personne_id", "scene_id"], name: "index_personnes_scenes_on_personne_id_and_scene_id", unique: true, using: :btree
+  add_index "personnes_scenes", ["personne_id", "scene_id"], name: "index_personnes_scenes_on_personne_id_and_scene_id", unique: true
+
+  create_table "racp_personnes", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "scenes", force: true do |t|
     t.text     "recit"

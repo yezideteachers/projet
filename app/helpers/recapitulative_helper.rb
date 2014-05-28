@@ -1,0 +1,2 @@
+module RecapitulativeHelper
+end

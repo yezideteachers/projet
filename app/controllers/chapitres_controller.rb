@@ -1,15 +1,18 @@
 class ChapitresController < ApplicationController
   before_action :set_chapitre, only: [:show, :edit, :update, :destroy]
-
+   #before_filter :set_chapitre, :only => [:show, :edit, :update]
   # GET /chapitres
   # GET /chapitres.json
   def index
+     @titre = "Tous les chapitres"
     @chapitres = Chapitre.all
   end
 
   # GET /chapitres/1
   # GET /chapitres/1.json
   def show
+    @chapitre = Chapitre.find(params[:id])
+    @titre = @chapitre.titre
   end
 
   # GET /chapitres/new
@@ -40,7 +43,7 @@ class ChapitresController < ApplicationController
   # PATCH/PUT /chapitres/1
   # PATCH/PUT /chapitres/1.json
   def update
-    params[:chapitre][:anecdote_ids] ||= []
+    
     respond_to do |format|
       if @chapitre.update(chapitre_params)
         format.html { redirect_to @chapitre, notice: 'Chapitre was successfully updated.' }

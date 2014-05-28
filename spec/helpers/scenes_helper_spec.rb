@@ -11,5 +11,18 @@ require 'spec_helper'
 #   end
 # end
 describe ScenesHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+ 
+  describe "full_title" do
+    it "should include the page name" do
+      full_title("foo").should =~ /foo/
+    end
+
+    it "should includes the base name" do
+      full_title("foo").should =~ /^Listing scenes/
+    end
+
+    it "should not include a bar for the scene page" do
+      full_title("").should_not =~ /\|/
+    end
+  end
 end

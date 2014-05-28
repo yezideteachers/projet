@@ -1,0 +1,18 @@
+
+<h1>Recapitulation des personnes</h1>
+<p>Personnes qui ne sont encore apparu dans aucune scene : </p>
+
+<% Personne.all.each do |personne| %>  
+ <%if personne.scene_ids==[] %>
+ <small> <h2><%= link_to personne.nom , personne %> </h2></small>
+  <%end%>
+<%end%>
+
+
+<p>Personnes qui ne sont encore apparu dans aucune scene : </p>
+
+<% Personne.all.each do |personne| %>  
+ <%if personne.scene_ids!=[] %>
+ <small><h2><%= link_to personne.nom , personne %> </h2></small> 
+  <%end%>
+<%end%>

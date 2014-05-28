@@ -1,8 +1,9 @@
 FactoryGirl.define do
-  factory :chapitre do
-    sequence(:chapitre_id)  { |n| "Chapitre #{n}" }
-    sequence(:titre) { |n| "titre #{n}"}
-   
+   factory :chapitre do
+         sequence(:chapitre_id)  { |n| 0 }
+    sequence(:titre ) { |n| "Exemple titre"}
+        
+        
   end
 
   factory :anecdote do

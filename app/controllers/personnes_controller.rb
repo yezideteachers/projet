@@ -1,5 +1,5 @@
 class PersonnesController < ApplicationController
-  before_action :set_personne, only: [:show, :edit, :update, :destroy]
+  before_action :set_personne, only: [:show, :edit, :update, :destroy, :recapitulativeP]
 
   # GET /personnes
   # GET /personnes.json
@@ -40,7 +40,7 @@ class PersonnesController < ApplicationController
   # PATCH/PUT /personnes/1
   # PATCH/PUT /personnes/1.json
   def update
-    params[:personne][:scene_ids] ||= []
+  
     respond_to do |format|
       if @personne.update(personne_params)
         format.html { redirect_to @personne, notice: 'Personne was successfully updated.' }
@@ -72,4 +72,7 @@ class PersonnesController < ApplicationController
     def personne_params
           params.require(:personne).permit(:nom, :scene_ids => [])
     end
+
+
+    
 end

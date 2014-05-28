@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+ 
+
+  get 'recapitulative/personne'
+
+  get 'recapitulative/chapitre'
+
   root to: 'static_pages#home'
 
  
@@ -7,12 +13,14 @@ Rails.application.routes.draw do
 
   get 'static_pages/help'
 
-  get 'static_pages/about'
+ 
   resources :users 
   resources :chapitres
   resources :anecdotes
   resources :scenes
   resources :personnes
+  
+
 
 
   get 'users/index'
