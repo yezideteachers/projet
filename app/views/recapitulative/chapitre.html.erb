@@ -9,11 +9,18 @@
  <% chapitre.scenes.all.each do |c| %>
  	<%if c.chapitre_id!=[] %>
  <small>
- <p> TITRE: chapitre.titre </p>
+ <p> TITRE: <%= link_to chapitre.titre, chapitre %></p>
+
  <p> periode de la scene </p>
   <h2><%= link_to c.periode , c %> </h2>
-  <p> nom de la premiere personne </p>
-  	<h2><%= link_to c.personnes.first.nom , c.personnes.first %></h2></small>
+
+  <p> nom des personnes </p>
+   <% c.personnes.all.each do |p| %>
+  <%if p.id!=[] %>
+  	<h2><%= link_to p.nom , p %></h2>
+ </small>
+  <%end%>
+  <%end%>
   <%end%>
   <%end%>
 <%end%>

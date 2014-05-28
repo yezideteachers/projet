@@ -28,6 +28,11 @@
  <p><small>recit: </small><%= scene.recit %>
  <small>lieu: </small><%=scene.lieu %>
  <small>periode: </small><%=scene.periode %></p>
+ 
+  <strong>personnes:</strong>
+  <% scene.personnes.each do |personne| %>
+ <%= personne.nom %>
+ <% end %>
  <% end %>
 </p>
 
